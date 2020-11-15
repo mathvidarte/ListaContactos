@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActivityCompat.requestPermissions(this, new String[] {
-                Manifest.permission.CALL_PHONE,
-        }, requestCode: 1);
+
 
         user = findViewById(R.id.user);
         addBtn = findViewById(R.id.addBtn);

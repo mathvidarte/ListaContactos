@@ -42,7 +42,9 @@ public class Contact_Activity extends AppCompatActivity implements View.OnClickL
         newContact = findViewById(R.id.newContact);
         contactList = findViewById(R.id.contactList);
 
-
+        ActivityCompat.requestPermissions(this, new String[] {
+                Manifest.permission.CALL_PHONE,
+        },  1);
 
         myUsername = getSharedPreferences("usuarios", MODE_PRIVATE).getString("username", "NO_USERNAME");
 

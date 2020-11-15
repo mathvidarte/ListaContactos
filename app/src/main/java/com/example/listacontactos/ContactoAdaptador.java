@@ -1,5 +1,6 @@
 package com.example.listacontactos;
 
+import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.core.app.ActivityCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -66,7 +69,17 @@ public class ContactoAdaptador extends BaseAdapter implements View.OnClickListen
         numberRow.setText(contacto.getTelefono());
 
         deleteBtn.setOnClickListener(this);
-        callBtn.setOnClickListener(this);
+
+
+
+        callBtn.setOnClickListener(
+                (v) -> {
+                    String tel = "tel:"+contacto.getTelefono();
+                    Intent i = new Intent(Intent.ACTION_CALL);
+                    i.setData(Uri.parse(tel));
+                    lista.getContext().startActivity(i);
+                }
+        );
 
 
         return renglonView;
@@ -80,12 +93,6 @@ public class ContactoAdaptador extends BaseAdapter implements View.OnClickListen
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("usuario").child(id);
                 ref.setValue(null);
                 break;
-            case R.id.callBtn:
-                String tel = "tel:"+contacto.getTelefono();
-                Intent i = new Intent(Intent.ACTION_CALL);
-                i.setData(Uri.parse(tel));
-                
-
         }
     }
 }
