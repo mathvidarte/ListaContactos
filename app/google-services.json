@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "751095211812",
+    "firebase_url": "https://lista-contactos-69ffb.firebaseio.com",
+    "project_id": "lista-contactos-69ffb",
+    "storage_bucket": "lista-contactos-69ffb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751095211812:android:f0e402f96d4bec4cf7b5b1",
+        "android_client_info": {
+          "package_name": "com.example.listacontactos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751095211812-ek0h7t0ka0ngov2sgp6uoc2e2bim5o8v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.listacontactos",
+            "certificate_hash": "cd4b41a12cf1581a7c91493feccfec76b4029425"
+          }
+        },
+        {
+          "client_id": "751095211812-rg3ok5lc3fpfff07l7ob2p1b3tmuiksg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0vox_KfT4kFvg5EYI6L1l7Fi-poUgkWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751095211812-rg3ok5lc3fpfff07l7ob2p1b3tmuiksg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
